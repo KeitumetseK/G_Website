@@ -1,0 +1,166 @@
+.heroSection {
+  height: 100%;
+  min-height: 100vh;
+  width: 100%;
+  background: url("/app-images/hero-bg.png") no-repeat center center;
+  background-size: cover;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding-top: var(--s100);
+}
+
+.imageHeroSection {
+  min-height: 105vh;
+}
+
+.heroSectionContent {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  gap: var(--s20);
+  max-width: 794px;
+  margin: 0 auto;
+  margin-top: var(--s50);
+  text-align: center;
+}
+
+.heroSectionContent .title,
+.heroSectionContentWithImage .title {
+  color: var(--black-1);
+  text-align: center;
+  font-family: var(--font-montserrat);
+  font-size: var(--fs64);
+  font-weight: 600;
+  line-height: normal;
+}
+
+.heroSectionContent .description,
+.heroSectionContentWithImage .description {
+  color: var(--black-1);
+  text-align: center;
+  font-family: var(--font-inter);
+  font-size: var(--fs18);
+  font-weight: 500;
+  line-height: var(--s30);
+  max-width: 638px;
+}
+.heroSectionButtons {
+  display: flex;
+  gap: var(--s21);
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.heroSectionButtonsWithImage {
+  display: flex;
+  gap: var(--s21);
+  justify-content: center;
+  align-items: center;
+}
+
+.heroSectionContentContainerWithImage {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--s20);
+  margin-top: var(--s100);
+}
+
+.heroSectionImage {
+  width: 487px;
+  height: 490px;
+  position: relative;
+  aspect-ratio: 1/1;
+}
+.heroSectionImage > img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+
+.heroSectionContentWithImage {
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-start;
+  gap: var(--s20);
+  flex-direction: column;
+  max-width: 721px;
+}
+
+.heroSectionContentWithImage .title,
+.heroSectionContentWithImage .description {
+  text-align: left;
+}
+.highlightedText {
+  font-family: var(--font-montserrat);
+  font-size: var(--fs32) !important;
+  font-weight: 600;
+  line-height: var(--s40) !important;
+}
+.heroSectionContentWithImage .title {
+  line-height: var(--s71) !important;
+}
+@media (max-width: 1280px) {
+  .heroSectionImage {
+    width: 400px;
+    height: 400px;
+  }
+}
+@media (max-width: 1099px) {
+  .heroSectionContentWithImage .title {
+    line-height: var(--s64) !important;
+  }
+}
+@media (max-width: 992px) {
+  .heroSectionContentContainerWithImage {
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-top: var(--s50);
+    gap: var(--s40);
+  }
+  .heroSection {
+    min-height: auto;
+    padding-top: var(--s80);
+    padding-bottom: var(--s40);
+  }
+  .heroSectionContentWithImage .title {
+    line-height: var(--s54) !important;
+  }
+  .heroSectionImage {
+    width: 300px;
+    height: 300px;
+  }
+}
+@media (max-width: 600px) {
+  .heroSectionContentWithImage .title {
+    line-height: var(--s54) !important;
+  }
+  .heroSectionImage {
+    width: 300px;
+    height: 300px;
+  }
+  .heroSection {
+    min-height: auto;
+    padding-top: var(--s60);
+    padding-bottom: var(--s30);
+  }
+  .heroSectionContent {
+    margin-top: var(--s30);
+  }
+}
+@media (max-width: 480px) {
+  .heroSectionButtonsWithImage {
+    flex-wrap: wrap;
+    align-items: start;
+    justify-content: start;
+  }
+  .heroSectionImage {
+    width: 200px;
+    height: 200px;
+  }
+}

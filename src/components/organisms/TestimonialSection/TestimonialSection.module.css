@@ -1,0 +1,39 @@
+.main {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  gap: var(--s44);
+}
+
+.testimonialCards {
+  columns: 3 auto;
+  gap: var(--s24);
+}
+
+.testimonialCards > div {
+  break-inside: avoid;
+  margin-bottom: var(--s24);
+}
+
+@media screen and (max-width: 992px) {
+  .testimonialCards {
+    columns: 2 auto;
+    gap: var(--s20);
+  }
+
+  .main {
+    gap: var(--s32);
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .testimonialCards {
+    columns: 1 auto;
+    gap: var(--s20);
+  }
+
+  .main {
+    gap: var(--s24);
+  }
+}

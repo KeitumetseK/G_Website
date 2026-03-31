@@ -1,0 +1,183 @@
+.main {
+  display: flex;
+  flex-direction: column;
+  gap: var(--s44);
+  margin-block: var(--s100);
+}
+
+.tableWrapper {
+  width: 100%;
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+}
+
+.table {
+  width: 100%;
+  max-width: 1128px;
+  margin: 0 auto;
+  border-collapse: collapse;
+  min-width: 600px;
+  table-layout: fixed;
+}
+
+.table th {
+  height: 65px;
+}
+
+.table td {
+  height: 56px;
+}
+
+.table th,
+.table td {
+  width: 33.33%;
+  padding: var(--s12) var(--s20);
+  text-align: left;
+}
+
+/* Header styles */
+.featureHeader {
+  background: var(--blue-3);
+  color: var(--white);
+  font-family: var(--font-inter);
+  font-size: var(--fs14);
+  font-weight: 600;
+}
+
+.oneOfficeHeader {
+  background: var(--green-2);
+  color: var(--black-1);
+  font-family: var(--font-inter);
+  font-size: var(--fs14);
+  font-weight: 600;
+}
+
+.modernWorkplaceHeader {
+  background: var(--blue);
+  color: var(--white);
+  font-family: var(--font-inter);
+  font-size: var(--fs14);
+  font-weight: 600;
+}
+
+/* Cell styles */
+.featureCell {
+  color: var(--black-1);
+  font-family: var(--font-montserrat);
+  font-size: var(--fs14);
+  font-weight: 400;
+  line-height: 19.137px;
+  background: var(--white-3);
+  border-bottom: 1px solid var(--white-2);
+}
+
+.oneOfficeCell {
+  color: var(--black-1);
+  font-family: var(--font-inter);
+  font-size: var(--fs13);
+  font-weight: 400;
+  line-height: 19.137px;
+  background: rgba(3, 217, 204, 0.10);
+  border-bottom: 1px solid var(--white);
+}
+
+.modernWorkplaceCell {
+  color: var(--black-1);
+  font-family: var(--font-inter);
+  font-size: var(--fs13);
+  font-weight: 400;
+  line-height: 19.137px;
+  background: rgba(75, 166, 255, 0.12);
+  border-bottom: 1px solid var(--white);
+}
+
+@media screen and (max-width: 992px) {
+  .main {
+    gap: var(--s32);
+    margin-block: var(--s60);
+  }
+
+  .table {
+    min-width: 550px;
+  }
+
+  .table th {
+    height: 55px;
+  }
+
+  .table td {
+    height: 50px;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .main {
+    gap: var(--s24);
+    margin-block: var(--s50);
+  }
+
+  .table {
+    min-width: 500px;
+  }
+
+  .table th,
+  .table td {
+    padding: var(--s10) var(--s12);
+    font-size: var(--fs12);
+  }
+
+  .table th {
+    height: 50px;
+  }
+
+  .table td {
+    height: 45px;
+  }
+
+  .featureHeader,
+  .oneOfficeHeader,
+  .modernWorkplaceHeader {
+    font-size: var(--fs12);
+  }
+
+  .featureCell {
+    font-size: var(--fs12);
+    line-height: 1.4;
+  }
+
+  .oneOfficeCell,
+  .modernWorkplaceCell {
+    font-size: var(--fs11);
+    line-height: 1.4;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .main {
+    gap: var(--s20);
+    margin-block: var(--s40);
+  }
+
+  .tableWrapper {
+    margin: 0 calc(-1 * var(--s16));
+    padding: 0 var(--s16);
+  }
+
+  .table {
+    min-width: 450px;
+  }
+
+  .table th,
+  .table td {
+    padding: var(--s8) var(--s10);
+    font-size: var(--fs11);
+  }
+
+  .table th {
+    height: 45px;
+  }
+
+  .table td {
+    height: 40px;
+  }
+}

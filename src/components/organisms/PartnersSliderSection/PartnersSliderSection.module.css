@@ -1,0 +1,38 @@
+.partnersSliderSection {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--s40);
+  margin-block-start: var(--s50);
+}
+.textSection {
+  width: 30%;
+  min-width: 432px;
+}
+
+.textSection > p {
+  color: var(--black-1);
+  font-family: var(--font-montserrat);
+  font-size: var(--fs24);
+  font-weight: 700;
+  line-height: 140%;
+  text-transform: capitalize;
+}
+
+.logosSection {
+  width: 60%;
+}
+
+@media (max-width: 850px) {
+  .partnersSliderSection {
+    flex-direction: column;
+  }
+  .textSection {
+    width: 100%;
+    min-width: unset;
+    text-align: center;
+  }
+  .logosSection {
+    width: 100%;
+  }
+}

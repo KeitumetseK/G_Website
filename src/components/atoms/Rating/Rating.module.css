@@ -1,0 +1,19 @@
+.rating {
+  display: flex;
+  align-items: center;
+  line-height: 1;
+}
+
+.rating svg {
+  display: inline-block;
+  margin-right: 2px;
+}
+
+.filledStar {
+  color: var(  --blue-2);
+}
+
+.emptyStar {
+  color: var(--gray-3);
+}
+

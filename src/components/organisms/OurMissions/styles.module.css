@@ -1,0 +1,170 @@
+.main {
+  height: 563px;
+  width: 100%;
+  background: url("/app-images/about-mission.png") no-repeat center center;
+  background-size: cover;
+  border-radius: var(--s16);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: var(--s60);
+  margin-block-start: var(--s100);
+  gap: var(--s32);
+}
+
+.left {
+  height: 100%;
+  width: 40%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.left > p {
+  color: var(--black-1);
+  font-family: var(--font-montserrat);
+  font-size: var(--fs58);
+  font-weight: 600;
+  line-height: var(--s80);
+  white-space: nowrap;
+}
+
+.right {
+  height: 100%;
+  width: 60%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: var(--s8);
+}
+
+.right > p {
+  color: var(--black-1);
+  font-family: var(--font-inter);
+  font-size: var(--fs20);
+  font-weight: 400;
+  line-height: var(--s30);
+}
+
+.logo {
+  width: 420px;
+  height: 320px;
+  position: relative;
+  aspect-ratio: 1/1;
+}
+.logo > img {
+  width: 100% !important;
+  height: 100% !important;
+  object-fit: fill !important;
+}
+
+@media (max-width: 1199px) {
+  .right > p {
+    font-size: var(--fs18);
+  }
+}
+
+@media (max-width: 1099px) {
+  .left {
+    width: 45%;
+  }
+  .right {
+    width: 55%;
+  }
+  .logo{
+    width: 380px;
+    height: 250px;
+  }
+  .main{
+    height: 480px;
+  }
+}
+
+@media (max-width: 1024px) {
+  .main {
+    flex-direction: column;
+  }
+  .left {
+    height: max-content;
+    width: 100%;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+  }
+  .right {
+    width: 100%;
+  }
+}
+
+@media (max-width: 992px) {
+  .main {
+    height: max-content;
+    gap: var(--s32);
+  }
+  .logo{
+    width: 280px;
+    height: 180px;
+  }
+}
+@media (max-width: 768px) {
+  .main {
+    padding: var(--s32);
+  }
+
+  .right img {
+    width: 40px;
+    height: 25px;
+  }
+  .left > p {
+    font-size: var(--fs48);
+  }
+  .right > p {
+    font-size: var(--fs16);
+  }
+}
+
+@media (max-width: 576px) {
+  .main {
+    padding: var(--s24);
+  }
+
+  .right img {
+    width: 30px;
+    height: 20px;
+  }
+  .left > p {
+    font-size: var(--fs42);
+  }
+  .right > p {
+    font-size: var(--fs14);
+  }
+  .logo{
+    width: 200px;
+    height: 130px;
+  }
+}
+
+@media (max-width: 450px) {
+  .right img {
+    width: 25px;
+    height: 15px;
+  }
+  .logo{
+    width: 150px;
+    height: 100px;
+  }
+}
+
+@media (max-width: 375px) {
+  .main {
+    padding: var(--s16);
+    gap: var(--s32);
+  }
+
+  .right img {
+    width: 20px;
+    height: 15px;
+  }
+  .left > p {
+    font-size: var(--fs32);
+  }
+}

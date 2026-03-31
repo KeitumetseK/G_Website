@@ -1,0 +1,276 @@
+.accordionWrapper {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.accordionItem {
+  display: flex;
+  padding: 0;
+  flex-direction: column;
+  border: none;
+  border-bottom: 1px solid var(--blue-4);
+  align-self: stretch;
+  border-radius: 0px;
+  transition: all 0.3s ease;
+}
+
+.accordion {
+  width: 100%;
+  font-family: var(--font-roboto);
+}
+
+.simpleLink {
+  display: block;
+  padding: var(--s10);
+  color: var(--black-2);
+  font-weight: 600;
+  font-size: var(--fs20);
+  text-decoration: none;
+  transition: all 0.3s ease;
+}
+
+.simpleLink:hover {
+  color: var(--black-2);
+  background: rgba(0, 0, 0, 0.02);
+}
+
+.activeLink {
+  color: var(--green-1);
+  font-weight: 700;
+}
+
+.accordionHeader {
+  width: 100%;
+  padding: var(--s10);
+}
+
+.accordionHeader button {
+  font-style: normal;
+  color: var(--black-2);
+  font-weight: 600;
+  font-size: var(--fs20);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+}
+.accordionHeader :global(.accordion-button:not(.collapsed)) {
+  background: var(--green-3);
+  color: var(--black-2);
+  border-radius: 12px;
+  padding: var(--s10) !important;
+}
+.accordionBody {
+  padding-block: 0px;
+  margin-block-start: 34px;
+  color: var(--black-2);
+  font-size: var(--fs16);
+  font-style: normal;
+  font-weight: 400;
+  line-height: 30px; /* 166.667% */
+  letter-spacing: 0.72px;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.subItemLink {
+  display: block;
+  color: var(--black-2);
+  text-decoration: none;
+  border-radius: var(--s8);
+  transition: all 0.2s ease;
+  font-weight: 500;
+  font-size: var(--fs20);
+}
+
+.nestedAccordion {
+  width: 100%;
+  font-family: var(--font-roboto);
+  border: none;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  padding-inline-start: 20px;
+}
+
+.nestedAccordionItem {
+  border: none;
+}
+
+.nestedAccordionItem:last-child {
+  border-bottom: none;
+  margin-bottom: 0;
+}
+
+.nestedAccordionHeader {
+  width: 100%;
+  padding: 0;
+}
+
+.nestedAccordionHeader button {
+  font-style: normal;
+  color: var(--black-2);
+  font-weight: 500;
+  font-size: var(--fs20);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  padding: var(--s8) var(--s12);
+  background: transparent;
+  border: none;
+}
+
+.nestedAccordionHeader :global(.accordion-button:not(.collapsed)) {
+  background: var(--green-3);
+  color: var(--black-2);
+  border-radius: var(--s8);
+  padding: var(--s10) !important;
+}
+
+.nestedAccordionHeader button:focus {
+  border: none;
+  box-shadow: none;
+}
+
+.nestedAccordionHeader :global(.accordion-button::after) {
+  display: none !important;
+  background-image: none !important;
+}
+
+.nestedAccordionHeader :global(.accordion-button.collapsed::after) {
+  content: "+";
+  font-size: var(--fs20);
+  font-weight: 600;
+  color: var(--black-2);
+  transition: all 0.3s ease;
+  display: inline-flex !important;
+  align-items: center;
+  justify-content: center;
+  width: 20px;
+  height: 20px;
+  background-image: none !important;
+  transform: none !important;
+  order: 2;
+  margin-left: auto;
+}
+
+.nestedAccordionHeader :global(.accordion-button:not(.collapsed)::after) {
+  content: "−";
+  font-size: var(--fs20);
+  font-weight: 600;
+  color: var(--black-2);
+  transition: all 0.3s ease;
+  display: inline-flex !important;
+  align-items: center;
+  justify-content: center;
+  width: 20px;
+  height: 20px;
+  background-image: none !important;
+  transform: none !important;
+  order: 2;
+  margin-left: auto;
+}
+
+.nestedAccordionBody {
+  padding: var(--s8) var(--s12) var(--s8) var(--s24);
+  display: flex;
+  flex-direction: column;
+  gap: var(--s4);
+}
+
+.nestedLink {
+  display: block;
+  padding: var(--s6) var(--s12);
+  color: var(--black-2);
+  text-decoration: none;
+  border-radius: var(--s8);
+  transition: all 0.2s ease;
+  font-weight: 500;
+  font-size: var(--fs16);
+}
+
+.nestedLink:hover {
+  background: rgba(0, 0, 0, 0.05);
+  color: var(--black-2);
+}
+.accordionHeader button:focus {
+  border: none;
+  box-shadow: none;
+}
+
+.accordion
+  :global(.accordion-item:first-of-type > .accordion-header .accordion-button) {
+  border-radius: var(--s12);
+}
+
+/* Hide default Bootstrap chevron icon */
+.accordionHeader :global(.accordion-button::after) {
+  display: none !important;
+  background-image: none !important;
+}
+.accordionItem:last-of-type {
+  border-bottom: none;
+}
+
+/* Add custom + icon when collapsed (replacing ::after) */
+.accordionHeader :global(.accordion-button.collapsed::after) {
+  content: "+";
+  font-size: var(--fs24);
+  font-weight: 600;
+  color: var(--black-2);
+  transition: all 0.3s ease;
+  display: inline-flex !important;
+  align-items: center;
+  justify-content: center;
+  width: 24px;
+  height: 24px;
+  background-image: none !important;
+  transform: none !important;
+  order: 2;
+  margin-left: auto;
+}
+
+/* Add custom - icon when expanded (not collapsed) */
+.accordionHeader :global(.accordion-button:not(.collapsed)::after) {
+  content: "−";
+  font-size: var(--fs24);
+  font-weight: 600;
+  color: var(--black-2);
+  transition: all 0.3s ease;
+  display: inline-flex !important;
+  align-items: center;
+  justify-content: center;
+  width: 24px;
+  height: 24px;
+  background-image: none !important;
+  transform: none !important;
+  order: 2;
+  margin-left: auto;
+}
+
+@media screen and (max-width: 992px) {
+  .accordion
+    :global(
+      .accordion-item:first-of-type > .accordion-header .accordion-button
+    ) {
+    border-radius: var(--s8);
+  }
+  .accordionBody {
+    margin-top: var(--s15);
+    padding-inline: var(--s10);
+    line-height: var(--lh25);
+    letter-spacing: var(--ls06);
+  }
+}
+
+@media screen and (max-width: 576px) {
+  .accordionBody {
+    margin-top: var(--s10);
+    padding-inline: var(--s5);
+    line-height: var(--lh20);
+    letter-spacing: var(--ls04);
+  }
+}

@@ -1,0 +1,128 @@
+.main {
+  width: 100%;
+  height: 448px;
+  background: url("/app-images/start-your-journey.png") no-repeat center center;
+  background-size: cover;
+  border-radius: var(--s16);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-block: var(--s100);
+}
+.content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: var(--s20);
+  max-width: 653px;
+}
+.content p:nth-of-type(1) {
+  color: var(--black-1);
+  font-family: var(--font-montserrat);
+  font-size: var(--fs52);
+  font-weight: 600;
+  text-align: center;
+  line-height: normal;
+}
+.content p:nth-of-type(2) {
+  color: var(--black-1);
+  font-family: var(--font-inter);
+  font-size: var(--fs20);
+  font-weight: 400;
+  text-align: center;
+  line-height: var(--s30);
+}
+
+.content > div {
+  width: 100%;
+  max-width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.content > div button {
+  max-width: 100%;
+}
+.button2 label{
+  cursor: not-allowed;
+}
+.buttons {
+  display: flex;
+  gap: var(--s16);
+  align-items: center;
+  justify-content: center;
+}
+@media (max-width: 992px) {
+  .main {
+    margin-block: var(--s50);
+  }
+}
+
+@media (max-width: 768px) {
+  .main {
+    padding-inline: 20px;
+  }
+
+  .content p:nth-of-type(1) {
+    font-size: var(--fs32);
+  }
+
+  .content p:nth-of-type(2) {
+    font-size: var(--fs16);
+    line-height: var(--s24);
+  }
+}
+
+@media (max-width: 480px) {
+  .main {
+    height: auto;
+    min-height: 300px;
+    padding: var(--s30) var(--s20);
+  }
+
+  .content {
+    gap: var(--s16);
+    width: 100%;
+  }
+
+  .content p:nth-of-type(1) {
+    font-size: var(--fs24);
+  }
+
+  .content p:nth-of-type(2) {
+    font-size: var(--fs14);
+    line-height: var(--s20);
+  }
+}
+
+@media (max-width: 375px) {
+  .main {
+    padding: var(--s24) var(--s16);
+    min-height: 280px;
+  }
+
+  .content {
+    gap: var(--s12);
+  }
+
+  .content p:nth-of-type(1) {
+    font-size: var(--fs20);
+  }
+
+  .content p:nth-of-type(2) {
+    font-size: var(--fs12);
+    line-height: var(--s18);
+  }
+
+  .content > div {
+    width: 100%;
+    padding: 0;
+  }
+
+  .content > div button {
+    width: 100%;
+    max-width: 100%;
+  }
+}

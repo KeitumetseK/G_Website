@@ -1,0 +1,14 @@
+.country-list .country {
+    padding-inline: 5px !important;
+}
+
+/* Hide country names and dial codes */
+.country-list .country .country-name,
+.country-list .country .dial-code {
+    display: none !important;
+}
+
+/* Center the flag */
+.country-list .country .flag {
+    margin-right: 0 !important;
+}

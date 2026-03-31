@@ -1,0 +1,34 @@
+.heroSection [class*="heroSectionContent"] p:nth-of-type(2) {
+  max-width: unset !important;
+  width: 100%;
+}
+
+
+
+@media (max-width: 1199px) {
+  .cardsContainer{
+    grid-template-columns: repeat(3, 1fr) !important;
+  }
+}
+
+@media (max-width: 992px) {
+  .cardsContainer{
+    grid-template-columns: repeat(2, 1fr) !important;
+  }
+  .heroSection {
+    min-height: 100vh !important;
+    padding-top: 130px !important;
+  }
+}
+@media (max-width: 768px) {
+  .heroSection {
+    min-height: 80vh !important;
+    padding-top: 130px !important;
+  }
+}
+
+@media (max-width: 520px) {
+  .cardsContainer{
+    grid-template-columns: 1fr !important;
+  }
+}

@@ -1,0 +1,121 @@
+.marqueContainer {
+  width: 100%;
+  overflow: hidden;
+  position: relative;
+}
+
+.marqueContainer::before,
+.marqueContainer::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  width: 100px;
+  z-index: 1;
+  pointer-events: none;
+}
+
+.marqueContainer::before {
+  left: 0;
+  background: linear-gradient(to right, var(--white) 0%, transparent 100%);
+}
+
+.marqueContainer::after {
+  right: 0;
+  background: linear-gradient(to left, var(--white) 0%, transparent 100%);
+}
+
+.marque {
+  display: flex;
+  width: fit-content;
+  animation: scroll 50s linear infinite;
+  gap: var(--s61);
+}
+
+.marqueTrack {
+  display: flex;
+  align-items: center;
+  gap: var(--s61);
+  flex-shrink: 0;
+}
+
+.logoWrapper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 60px;
+  flex-shrink: 0;
+  opacity: 0.8;
+  transition: opacity 0.3s ease;
+}
+
+.logoWrapper:hover {
+  opacity: 1;
+}
+
+.logo {
+  height: auto;
+  width: auto;
+  max-height: 60px;
+  max-width: 150px;
+  object-fit: contain;
+  filter: grayscale(0);
+}
+
+@keyframes scroll {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
+
+@media screen and (max-width: 992px) {
+  .marqueContainer::before,
+  .marqueContainer::after {
+    width: 60px;
+  }
+
+  .marque {
+    animation-duration: 25s;
+  }
+
+  .marqueTrack {
+    gap: var(--s24);
+  }
+
+  .logoWrapper {
+    height: 50px;
+  }
+
+  .logo {
+    max-height: 50px;
+    max-width: 120px;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .marqueContainer::before,
+  .marqueContainer::after {
+    width: 40px;
+  }
+
+  .marque {
+    animation-duration: 20s;
+  }
+
+  .marqueTrack {
+    gap: var(--s20);
+  }
+
+  .logoWrapper {
+    height: 40px;
+  }
+
+  .logo {
+    max-height: 40px;
+    max-width: 100px;
+  }
+}
+

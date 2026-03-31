@@ -1,0 +1,26 @@
+.main {
+  margin-block: var(--s100);
+  display: flex;
+  flex-direction: column;
+  gap: var(--s44);
+}
+.headingSection {
+  max-width: 752px !important;
+}
+.pricingCards {
+  display: flex;
+  gap: var(--s24);
+  width: 100%;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+}
+
+.tabs {
+  width: 100%;
+  margin-bottom: var(--s20);
+}
+
+.tabsContainer {
+  align-items: center !important;
+}

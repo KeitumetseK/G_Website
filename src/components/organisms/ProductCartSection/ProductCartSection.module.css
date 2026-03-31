@@ -1,0 +1,208 @@
+.main {
+  display: flex;
+  margin-block: var(--s100);
+  align-items: flex-start;
+  gap: 12px;
+}
+.leftSection {
+  border-radius: 20px;
+  border: 2px solid var(--green-1);
+  background: linear-gradient(
+    180deg,
+    rgba(243, 249, 255, 0) 0%,
+    #e7fffe 115.05%
+  );
+  display: flex;
+  width: 438px;
+  height: 296px;
+  padding: 38px 24px;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 24px;
+}
+.leftSection > p {
+  color: var(--black-4);
+  text-align: center;
+  font-family: var(--font-montserrat);
+  font-size: var(--fs24);
+  font-weight: 600;
+  line-height: var(--s24);
+}
+
+.rightSection {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  flex: 1;
+}
+
+.title {
+  color: var(--black-5);
+  font-family: var(--font-inter);
+  font-size: var(--fs40);
+  font-weight: 500;
+  line-height: var(--s48);
+}
+
+.price {
+  color: var(--black-5);
+  font-family: var(--font-inter);
+  font-size: var(--fs28);
+  font-weight: 500;
+  line-height: 33px;
+}
+
+.price > span {
+  color: var(--black-5-75);
+  font-family: var(--font-inter);
+  font-size: var(--fs16);
+  font-weight: 500;
+  line-height: 19px;
+}
+
+.buttons {
+  display: flex;
+  gap: 12px;
+  align-items: center;
+}
+
+.priceContainer {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+.dropdownContainer {
+  border: 1px solid var(--gray-6) !important;
+  border-radius: 8px !important;
+  box-shadow: none !important;
+  color: var(--black-5);
+  font-family: var(--font-inter);
+  font-size: var(--fs20);
+  font-weight: 400;
+}
+.dropdownContainer
+  > div:first-of-type
+  > div:first-of-type
+  > div:first-of-type
+  > div
+  > div {
+  font-size: var(--fs20) !important;
+}
+
+.counter {
+  margin-right: 12px;
+}
+
+.priceSection {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+.priceSection > p {
+  color: var(--black-5);
+  font-family: var(--font-inter);
+  font-size: var(--fs28);
+  font-weight: 500;
+  line-height: var(--s33);
+}
+
+.priceSection > ul {
+  display: flex;
+  flex-direction: column;
+  gap: var(--s20);
+  padding-left: 16px;
+}
+.priceSection > ul > li {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+.priceSection > ul > li > p {
+  color: var(--black-1);
+  font-family: var(--font-inter);
+  font-size: var(--fs18);
+  font-weight: 400;
+  line-height: var(--s28);
+}
+.priceSection > ul > li > span {
+  position: relative;
+  width: 28px;
+  height: 28px;
+}
+.priceSection > ul > li > span > img {
+  object-fit: contain;
+}
+
+.buttonsContainer {
+  display: flex;
+  gap: 12px;
+  align-items: center;
+}
+@media (max-width: 1199px) {
+  .addCartButton svg {
+    width: 20px;
+    height: 20px;
+  }
+}
+
+@media (max-width: 991px) {
+  .leftSection {
+    height: 250px;
+    width: 100%;
+  }
+  .main {
+    flex-direction: column;
+    gap: 24px;
+  }
+  .rightSection {
+    width: 100%;
+  }
+
+  .priceContainer {
+    width: 100%;
+  }
+}
+
+@media (max-width: 576px) {
+  .rightSection {
+    gap: 16px;
+  }
+  .buttons {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .buttons svg {
+    width: 18px;
+    height: 18px;
+  }
+  .priceSection > ul > li > span {
+    width: 20px;
+    height: 20px;
+  }
+  .priceSection > ul {
+    padding-left: 12px;
+  }
+}
+
+@media (max-width: 480px) {
+  .buttonsContainer button {
+    height: 38px !important;
+  }
+  .buttonsContainer button svg {
+    width: 14px;
+    height: 14px;
+  }
+}
+
+@media (max-width: 420px) {
+  .buttons svg {
+    width: 14px;
+    height: 14px;
+  }
+  .priceSection > ul > li {
+    gap: 8px;
+    align-items: flex-start;
+  }
+}

@@ -1,0 +1,116 @@
+.containerClass {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: var(--s8);
+}
+
+.labelWrapper {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+}
+
+.labelText {
+  color: var(--black-1);
+  font-family: var(--font-montserrat);
+  font-size: var(--fs14);
+  font-weight: 500;
+  line-height: var(--s20);
+  text-transform: capitalize;
+}
+
+.label2Wrapper {
+  margin-left: auto;
+  color: var(--black-2);
+  font-family: var(--font-montserrat);
+  font-size: var(--fs14);
+  font-weight: 500;
+  line-height: 20px;
+  text-transform: capitalize;
+}
+
+.label2Text {
+  color: var(--black-1);
+  font-family: var(--font-montserrat);
+  font-size: var(--fs14);
+  font-weight: 400;
+  line-height: var(--s20);
+  opacity: 0.4;
+  text-transform: capitalize;
+}
+
+.required {
+  color: var(--error);
+}
+
+.disabled {
+  opacity: 0.5;
+}
+
+.textareaContainer {
+  border-radius: var(--s8);
+  border: 1px solid var(--white-5);
+  background: var(--white);
+  display: flex;
+  padding: 10px 16px;
+  width: 100%;
+  align-items: flex-start;
+  gap: var(--s8);
+  align-self: stretch;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  position: relative;
+  box-shadow: 0 1px 2px 0 rgba(16, 24, 40, 0.05);
+}
+
+
+
+.textareaContainer:active {
+  transform: translateY(0);
+  box-shadow: 0 0 0 3px var(--green-1-o10), 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.textareaDisabled {
+  cursor: not-allowed;
+  opacity: 0.5;
+}
+
+
+
+.textarea {
+  border: none;
+  outline: none;
+  font-size: var(--fs14);
+  font-weight: 500;
+  font-family: var(--font-inter);
+  background-color: transparent;
+  line-height: var(--s24);
+  width: 100%;
+  resize: none;
+  transition: all 0.2s ease;
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+  min-height: var(--s80);
+}
+
+.textarea::-webkit-scrollbar {
+  display: none;
+}
+
+.textarea:focus {
+  color: var(--black-1);
+}
+
+.textarea:active {
+  color: var(--black-1);
+}
+
+.textarea::placeholder {
+  color: var(--gray-4);
+  font-size: var(--fs14);
+  font-weight: 400;
+  font-family: var(--font-inter);
+  line-height: var(--s20);
+  opacity: 0.4;
+}

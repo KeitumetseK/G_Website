@@ -1,0 +1,118 @@
+.container {
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    gap: var(--s8);
+  }
+  
+  .checkboxContainer {
+    width: 100%;
+    display: flex;
+    align-items: center;
+  }
+  
+  .checkboxWrapper {
+    display: flex;
+    gap: var(--s8);
+    cursor: pointer;
+    align-items: center;
+    width: 100%;
+  }
+  
+  .checkboxInput {
+    appearance: none;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    width: var(--s16);
+    height: var(--s16);
+    border: 1px solid var(--white-5);
+    border-radius: var(--s4);
+    background-color: var(--white);
+    cursor: pointer;
+    position: relative;
+    flex-shrink: 0;
+    transition: all 0.2s ease;
+  }
+  
+  .checkboxInput:hover:not(:disabled) {
+    border-color: var(--blue-4);
+  }
+  
+  .checkboxInput:checked {
+    background-color: var(--blue-1);
+    border-color: var(--blue-1);
+  }
+  
+  .checkboxInput:checked::after {
+    content: "";
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    width: 10px;
+    height: 10px;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='white'%3E%3Cpath d='M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z'/%3E%3C/svg%3E");
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+  }
+  
+  .checkboxInputDisabled {
+    background-color: var(--white);
+    border-color: var(--white-5);
+    cursor: not-allowed;
+    opacity: 0.5;
+  }
+  
+  .checkboxInput:disabled {
+    background-color: var(--white);
+    border-color: var(--white-5);
+    cursor: not-allowed;
+    opacity: 0.5;
+  }
+  
+  .checkboxInput:disabled:checked {
+    background-color: var(--blue-1);
+    border-color: var(--blue-1);
+    opacity: 0.5;
+  }
+  
+  .checkboxLabel {
+    font-size: var(--fs14);
+    font-weight: 500;
+    font-family: var(--font-inter);
+    color: var(--black-2);
+    cursor: pointer;
+    user-select: none;
+    transition: color 0.2s ease;
+    flex: 1;
+    margin: 0;
+  }
+  
+  .label2Text {
+    font-size: var(--fs14);
+    font-weight: 400;
+    font-family: var(--font-inter);
+    color: var(--black-2);
+    opacity: 0.4;
+    margin-left: var(--s4);
+  }
+  
+  .required {
+    color: var(--red-color);
+  }
+  
+  .disabled {
+    color: var(--black-2);
+    opacity: 0.5;
+    cursor: not-allowed;
+  }
+  
+  .error {
+    font-family: var(--font-inter);
+    font-size: var(--fs14);
+    font-weight: 400;
+    color: var(--red-color);
+    margin: var(--s4) 0 0 0;
+  }
+  

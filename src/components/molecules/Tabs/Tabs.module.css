@@ -1,0 +1,306 @@
+/* Base Tabs Container */
+.tabsContainer {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  font-family: var(--font-inter);
+}
+
+.tabsContainer.disabled {
+  opacity: 0.6;
+  pointer-events: none;
+}
+
+/* Tab List */
+.tabList {
+  display: flex;
+  gap: var(--s4);
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+/* Base Tab Button */
+.tab {
+  display: flex;
+  align-items: center;
+  gap: var(--s8);
+  padding: var(--s12) var(--s20);
+  border: none;
+  background: transparent;
+  color: var(--blue-1);
+  font-size: var(--fs18);
+  font-family: var(--font-inter);
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  border-radius: var(--s12);
+  position: relative;
+  white-space: nowrap;
+  text-decoration: none;
+  outline: none;
+}
+
+.tab:hover:not(.disabled) {
+  color: var(--blue-1);
+  background-color: var(--blue-4-o7);
+}
+
+.tab:focus:not(.active),
+.tab:focus-visible:not(.active) {
+  outline: 2px solid var(--blue-1);
+  outline-offset: 2px;
+}
+
+.tab.active:focus,
+.tab.active:focus-visible {
+  outline: none;
+}
+
+.tab.active {
+  color: var(--blue-1);
+  font-weight: 600;
+}
+
+.tab.disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+  pointer-events: none;
+}
+
+.tab.animated {
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+/* Tab Elements */
+.tabIcon {
+  font-size: var(--fs16);
+  line-height: 1;
+}
+
+.tabLabel {
+  font-size: inherit;
+  font-weight: inherit;
+}
+
+.tabBadge {
+  background-color: var(--error);
+  color: var(--white);
+  font-size: var(--fs10);
+  font-weight: 600;
+  padding: var(--s2) var(--s6);
+  border-radius: var(--s10);
+  min-width: var(--s18);
+  height: var(--s18);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  line-height: 1;
+}
+
+/* Pill Variant */
+.tabsContainer.pill .tabList {
+  background-color: var(--blue-4-o7);
+  border-radius: var(--s12);
+  padding: var(--s10);
+  border: none;
+  gap: var(--s8);
+  display: flex;
+  align-items: center;
+  width: fit-content;
+}
+
+.tabsContainer.pill .tab {
+  border-radius: var(--s8);
+  background: transparent;
+  color: var(--gray-5);
+  padding: var(--s12) var(--s24);
+  font-size: var(--fs18);
+  font-weight: 600;
+  white-space: nowrap;
+  transition: all 0.2s ease;
+  border: none;
+}
+
+.tabsContainer.pill .tab.active {
+  background-color: var(--green-2);
+  color: var(--white);
+  box-shadow: none;
+  font-weight: 600;
+  border-radius: var(--s6);
+  outline: none;
+  border: none;
+}
+
+.tabsContainer.pill .tab:hover:not(.active):not(.disabled) {
+  background-color: transparent;
+  color: var(--gray-5);
+}
+
+.tabsContainer.pill .tab:focus:not(.active),
+.tabsContainer.pill .tab:focus-visible:not(.active) {
+  outline: 2px solid var(--green-2);
+  outline-offset: 2px;
+}
+
+.tabsContainer.pill .tab.active:focus,
+.tabsContainer.pill .tab.active:focus-visible {
+  outline: none;
+}
+
+/* Underline Variant */
+.tabsContainer.underline .tabList {
+  padding: 0;
+  gap: 0;
+  display: flex;
+  align-items: center;
+  width: 100%;
+  justify-content: space-between;
+}
+
+.tabsContainer.underline .tab {
+  border-radius: 0;
+  background: transparent;
+  color: var(--gray-7);
+  padding: 10px;
+  gap: 24px;
+  font-size: var(--fs18);
+  font-family: var(--font-inter);
+  font-weight: 400;
+  line-height: 30px;
+  text-align: center;
+  white-space: nowrap;
+  transition: all 0.2s ease;
+  border: none;
+  border-bottom: 2px solid transparent;
+  position: relative;
+}
+
+.tabsContainer.underline .tab.active {
+  background-color: transparent;
+  color: var(--black);
+  font-weight: 600;
+  border-bottom: 2px solid var(--black);
+}
+
+.tabsContainer.underline .tab:hover:not(.active):not(.disabled) {
+  background-color: transparent;
+  color: var(--black);
+}
+
+.tabsContainer.underline .tab:focus:not(.active),
+.tabsContainer.underline .tab:focus-visible:not(.active) {
+  outline: none;
+}
+
+.tabsContainer.underline .tab.active:focus,
+.tabsContainer.underline .tab.active:focus-visible {
+  outline: none;
+}
+
+/* Responsive Design */
+@media (max-width: 992px) {
+  .tabsContainer {
+    width: 100%;
+  }
+
+  .tab {
+    flex: 1;
+    padding: 10px 12px;
+    font-size: 12px;
+  }
+
+  .tabList {
+    max-width: 100%;
+    width: 100%;
+    overflow-x: auto;
+    gap: 2px;
+    scrollbar-width: none;
+  }
+}
+
+@media (max-width: 670px) {
+  .tabList {
+    flex-wrap: wrap;
+    overflow-x: visible;
+    gap: var(--s8);
+  }
+
+  .tab {
+    flex: none;
+    white-space: normal;
+    text-align: center;
+  }
+  .tabsContainer {
+    display: unset;
+  }
+  .tabsContainer.pill .tabList {
+    flex-wrap: wrap;
+
+    width: 70%;
+  }
+
+  .tabsContainer.pill .tab {
+    flex: none;
+    white-space: normal;
+  }
+
+  .tabsContainer.underline .tabList {
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    gap: var(--s8);
+  }
+
+  .tabsContainer.underline .tab {
+    flex: none;
+    white-space: normal;
+  }
+}
+@media (max-width: 576px) {
+  .tabsContainer.pill .tabList {
+    width: 80%;
+  }
+}
+
+@media (max-width: 500px) {
+  .tabsContainer.pill .tabList {
+    width: 100%;
+  }
+}
+
+@media (max-width: 480px) {
+  .tab {
+    padding: 8px 10px;
+    font-size: 11px;
+  }
+
+  .tabIcon {
+    font-size: 14px;
+  }
+
+  .tabBadge {
+    font-size: 9px;
+    padding: 1px 4px;
+    min-width: 16px;
+    height: 16px;
+  }
+}
+
+/* High contrast mode support */
+@media (prefers-contrast: high) {
+  .tab {
+    border: 1px solid currentColor;
+  }
+
+  .tab.active {
+    background-color: currentColor;
+    color: white;
+  }
+}
+
+/* Reduced motion support */
+@media (prefers-reduced-motion: reduce) {
+  .tab {
+    transition: none;
+  }
+}

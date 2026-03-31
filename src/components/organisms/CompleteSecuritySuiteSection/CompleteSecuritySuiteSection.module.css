@@ -1,0 +1,41 @@
+.coursesContainer {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: var(--s24);
+  width: 100%;
+  max-width: 100%;
+  box-sizing: border-box;
+  margin-block-end: var(--s100);
+}
+
+.cardWrapper {
+  width: calc((100% - var(--s24) * 2) / 3);
+}
+
+@media screen and (max-width: 1280px) {
+  .coursesContainer {
+    gap: var(--s20);
+  }
+  .cardWrapper {
+    width: calc((100% - var(--s20)) / 2);
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .coursesContainer {
+    gap: var(--s16);
+  }
+  .cardWrapper {
+    width: 100%;
+  }
+}
+
+.main {
+  display: flex;
+  flex-direction: column;
+  gap: var(--s44);
+  width: 100%;
+  max-width: 100%;
+  overflow-x: hidden;
+}

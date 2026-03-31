@@ -1,0 +1,77 @@
+.main {
+  display: flex;
+  flex-direction: column;
+  gap: 35px;
+  margin-block: var(--s100);
+}
+
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  gap: 12px;
+  flex-wrap: wrap;
+}
+
+.header > p {
+  color: var(--black-1);
+  font-family: var(--font-montserrat);
+  font-size: var(--fs52);
+  font-weight: 600;
+}
+.header button{
+  height: 45px !important;
+}
+.header > div{
+    display: flex;
+    align-items: center;
+    gap: 24px;
+}
+.pricingCards {
+    display: flex;
+    gap: var(--s24);
+    width: 100%;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+  }
+
+  @media (max-width: 992px) {
+    .header > p{
+      font-size: var(--fs40);
+    }
+    .header button{
+      height: 43px !important;
+    }
+  }
+
+  @media (max-width: 768px) {
+    .header > p{
+      font-size: var(--fs32);
+    }
+    .header button{
+      height: 40px !important;
+      padding-inline: 12px !important;
+    }
+    .header button svg{
+      width: 16px;
+      height: 16px;
+    }
+    .header > div{
+      gap: 12px;
+    }
+  }
+
+  @media (max-width: 400px) {
+    .header button{
+      height: 38px !important;
+    }
+    .header button svg{
+      width: 14px;
+      height: 14px;
+    }
+    .header > div{
+      gap: 10px;
+    }
+  }

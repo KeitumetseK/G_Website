@@ -1,0 +1,33 @@
+.main {
+  display: flex;
+  padding: var(--s34) var(--s34);
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  gap: var(--s24);
+  flex: 1 0 0;
+  align-self: stretch;
+  border-radius: var(--s20);
+  min-height: 685px;
+
+  background: linear-gradient(180deg, #f3f9ff 0%, #e7fffe 115.05%), #eef6f5;
+}
+
+.main > div:nth-of-type(1) {
+  display: flex;
+  gap: var(--s24);
+  width: 100%;
+}
+@media (max-width: 1025px) {
+  .main {
+    height: 500px;
+  }
+}
+
+@media (max-width: 481px) {
+  .main > div:nth-of-type(1) {
+    flex-direction: column;
+    gap: var(--s16);
+  }
+}
+

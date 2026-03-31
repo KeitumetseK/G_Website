@@ -1,0 +1,49 @@
+.main {
+  display: flex;
+  flex-direction: column;
+  gap: var(--s44);
+}
+
+.cardContainer {
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  gap: var(--s24);
+}
+
+/* First 2 cards: each takes 3 columns (50% width each) */
+.cardContainer > :nth-child(1),
+.cardContainer > :nth-child(2) {
+  grid-column: span 3;
+}
+
+/* Last 3 cards: each takes 2 columns (33.33% width each) */
+.cardContainer > :nth-child(3),
+.cardContainer > :nth-child(4),
+.cardContainer > :nth-child(5) {
+  grid-column: span 2;
+}
+
+@media screen and (max-width: 1025px) {
+  .cardContainer {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .cardContainer > :nth-child(1),
+  .cardContainer > :nth-child(2),
+  .cardContainer > :nth-child(3),
+  .cardContainer > :nth-child(4),
+  .cardContainer > :nth-child(5) {
+    grid-column: span 1;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .cardContainer {
+    grid-template-columns: 1fr;
+  }
+
+  .cardContainer > :nth-child(1),
+  .cardContainer > :nth-child(2) {
+    grid-column: span 1;
+  }
+}

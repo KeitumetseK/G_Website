@@ -1,0 +1,25 @@
+.featureCard{
+    border-radius: 16px;
+background: var(--white);
+box-shadow: 0 0 15px 0 rgba(0, 0, 0, 0.10);
+display: flex;
+padding: var(--s24);
+flex-direction: column;
+align-items: flex-start;
+gap: var(--s16);
+}
+
+.featureCard p:nth-of-type(1){
+    color: var(--black-1);
+font-family: var(--font-montserrat);
+font-size: var(--fs24);
+font-weight: 600;
+line-height: var(--s30);
+}
+.featureCard p:nth-of-type(2){
+    color: var(--black-1);
+font-family: var(--font-inter);
+font-size: var(--fs20);
+font-weight: 400;
+line-height: var(--s30);
+}

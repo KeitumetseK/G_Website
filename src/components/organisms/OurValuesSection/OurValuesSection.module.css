@@ -1,0 +1,24 @@
+.main {
+  display: flex;
+  flex-direction: column;
+  gap: var(--s64);
+  margin-block: var(--s100);
+}
+
+.cards > div {
+  min-height: 314px !important;
+}
+.cardsThree {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: var(--s24);
+}
+.cardsFour {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: var(--s24);
+}
+.headingSection p:nth-of-type(1) {
+  max-width: 480px !important;
+}
+

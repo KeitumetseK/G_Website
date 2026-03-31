@@ -1,0 +1,134 @@
+.container {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: var(--s8);
+}
+
+.labelWrapper {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+}
+
+.labelText {
+  color: var(--black-1);
+  font-family: var(--font-montserrat);
+  font-size: var(--fs14);
+  font-weight: 500;
+  line-height: var(--s20);
+  text-transform: capitalize;
+}
+
+.label2Wrapper {
+  margin-left: auto;
+  color: var(--black-1);
+  font-family: var(--font-montserrat);
+  font-size: var(--fs14);
+  font-weight: 500;
+  line-height: var(--s20);
+  text-transform: capitalize;
+}
+
+.label2Text {
+  color: var(--black-1);
+  font-family: var(--font-montserrat);
+  font-size: var(--fs14);
+  font-weight: 400;
+  line-height: var(--s20);
+  opacity: 0.4;
+  text-transform: capitalize;
+}
+
+.required {
+  color: var(--error);
+}
+
+.disabled {
+  opacity: 0.5;
+}
+
+.selectContainer {
+  width: 100%;
+  position: relative;
+}
+
+.selectContainerDisabled {
+  cursor: not-allowed;
+  opacity: 0.5;
+}
+
+.leftIconBox {
+  position: absolute;
+  left: var(--s18);
+  top: 48%;
+  transform: translateY(-50%);
+  height: max-content;
+  z-index: 2;
+}
+
+.iconColor svg {
+  color: var(--black-2);
+  opacity: 0.3;
+  transition: all 0.2s ease;
+  width: var(--s18);
+  height: var(--s18);
+}
+
+.withValue svg {
+  opacity: 1;
+}
+
+.indicatorIcon {
+  color: var(--gray-13);
+  transition: transform 0.3s ease;
+}
+
+.indicatorOpen {
+  transform: rotate(180deg);
+  color: var(--blue-1);
+}
+
+.reactSelect {
+  border-radius: var(--s10);
+  border: 1px solid var(--white-5);
+  background: var(--white);
+  display: flex;
+  padding: 0 !important;
+  width: 100%;
+  align-items: center;
+  gap: var(--s8);
+  align-self: stretch;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  position: relative;
+  height: 48px;
+}
+
+.reactSelect > div:first-of-type {
+  border: none !important;
+  background: transparent !important;
+  box-shadow: 0 1px 2px 0 rgba(16, 24, 40, 0.05) !important;
+}
+
+.dropdownContainerPrimary {
+  min-width: 350px;
+}
+
+.checkboxContainer {
+  display: flex;
+  align-items: center;
+  gap: var(--s8);
+}
+.checkbox input:checked {
+  background-color: var(--blue-2);
+  border-color: var(--blue-2);
+}
+
+
+
+.primary {
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: flex-start;
+}

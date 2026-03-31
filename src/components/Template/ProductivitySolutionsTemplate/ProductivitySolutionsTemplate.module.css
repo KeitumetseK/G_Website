@@ -1,0 +1,21 @@
+.heroSection {
+  min-height: 540px !important;
+}
+
+@media (max-width: 768px) {
+  .startJourneySection {
+    height: 320px !important;
+  }
+}
+
+@media (max-width: 576px) {
+  .startJourneySection div[class*="buttons"] {
+    flex-wrap: wrap;
+    gap: var(--s12);
+    width: 100% !important;
+  }
+
+  .heroSection{
+    min-height: 400px !important;
+  }
+}

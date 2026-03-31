@@ -1,0 +1,29 @@
+.heroSection {
+  padding-block: var(--s100);
+}
+
+@media (max-width: 1099px) {
+  .heroSection p:first-of-type {
+    font-size: var(--fs40) !important;
+  }
+}
+@media (max-width: 992px) {
+  .heroSection {
+    min-height: max-content !important;
+    padding-top: 170px !important;
+  }
+
+  .heroSection p[class*="title"] {
+    line-height: var(--s64) !important;
+  }
+}
+
+
+@media (max-width: 480px) {
+  .heroSection {
+    padding-top: 140px !important;
+  }
+  .heroSection p[class*="highlightedText"] {
+    font-size: var(--fs28) !important;
+  }
+}

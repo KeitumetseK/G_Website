@@ -1,0 +1,154 @@
+.container {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: var(--s6);
+}
+
+.labelWrapper {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+}
+
+.labelText {
+  color: var(--black-1);
+  font-family: var(--font-montserrat);
+  font-size: var(--fs14);
+  font-weight: 500;
+  line-height: var(--s20);
+  text-transform: capitalize;
+  margin: 0;
+}
+
+.label2Wrapper {
+  margin-left: auto;
+  color: var(--black-1);
+  font-family: var(--font-montserrat);
+  font-size: var(--fs14);
+  font-weight: 500;
+  line-height: var(--s20);
+  text-transform: capitalize;
+}
+
+.required {
+  color: var(--error);
+}
+
+.disabled {
+  opacity: 0.5;
+}
+
+.inputWrapper {
+  width: 100%;
+  display: flex;
+  position: relative;
+  border-radius: var(--s8);
+  border: 1px solid var(--white);
+  background: var(--white);
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  height: var(--s46) !important;
+  box-shadow: 0 1px 2px 0 rgba(16, 24, 40, 0.05);
+}
+
+.inputDisabled {
+  cursor: not-allowed;
+  opacity: 0.5;
+}
+
+.withLeftIcon {
+  padding-left: var(--s25);
+}
+
+.leftIconBox {
+  position: absolute;
+  left: var(--s18);
+  top: 48%;
+  transform: translateY(-50%);
+  height: max-content;
+  z-index: 2;
+}
+
+.iconColor svg {
+  color: var(--black-2);
+  opacity: 0.3;
+  transition: all 0.2s ease;
+  width: var(--s18);
+  height: var(--s18);
+}
+
+.withValue svg {
+  opacity: 1;
+}
+
+.inputContainer {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  position: relative;
+  border: none !important;
+  background: transparent !important;
+  height: 46px !important;
+}
+
+.inputContainer :global(.flag-dropdown) {
+  box-shadow: none !important;
+  border: none !important;
+  border-right: 1px solid var(--white-5) !important;
+  background: transparent !important;
+  border-radius: 0 !important;
+}
+
+.inputContainer :global(.flag-dropdown):hover {
+  background: transparent !important;
+}
+
+.inputContainer :global(.flag-dropdown.open) {
+  background: transparent !important;
+}
+
+.inputContainer :global(.flag-dropdown) ::before {
+  display: none !important;
+}
+
+.inputContainer :global(.form-control) {
+  color: var(--black-2) !important;
+  font-size: var(--fs14) !important;
+  font-weight: 500 !important;
+  font-family: var(--font-inter) !important;
+  height: 48px !important;
+  border: none !important;
+  border-radius: 0 !important;
+  background: transparent !important;
+  padding-left: 65px !important;
+}
+
+.inputContainer :global(.form-control):focus {
+  outline: none !important;
+  box-shadow: none !important;
+  border: none !important;
+}
+
+.inputContainer :global(.form-control)::placeholder {
+  color: var(--black-2);
+  opacity: 0.4;
+  font-size: var(--fs14);
+  font-weight: 400;
+  font-family: var(--font-inter);
+}
+
+@media (max-width: 576px) {
+  .inputClassName {
+    padding: 12px 8px !important;
+  }
+
+  .phoneContainer input {
+    padding: 12px 8px !important;
+  }
+
+  .buttonClass {
+    height: 46px;
+    padding: 0 8px;
+  }
+}

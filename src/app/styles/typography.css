@@ -1,0 +1,369 @@
+:root {
+  --fs96: 96px;
+  --fs68: 68px;
+  --fs64: 64px;
+  --fs60: 60px;
+  --fs58: 58px;
+  --fs56: 56px;
+  --fs54: 54px;
+  --fs52: 52px;
+  --fs48: 48px;
+  --fs42: 42px;
+  --fs40: 40px;
+  --fs38: 38px;
+  --fs32: 32px;
+  --fs28: 28px;
+  --fs24: 24px;
+  --fs23: 23px; /* 2XL */
+  --fs22: 22px;
+  --fs20: 20px;
+  --fs19: 19px;
+  --fs18: 18px;
+  --fs16: 16px;
+  --fs14: 14px;
+  --fs13: 13px;
+  --fs12: 12px;
+  --fs10: 10px;
+
+  /* for all other than font size margin, padding, border-radius, etc. */
+  --s4: 4px;
+  --s6: 6px;
+  --s8: 8px;
+  --s10: 10px;
+  --s11: 11px;
+  --s12: 12px; /* Extra Small */
+  --s13: 13px; /* Small */
+  --s14: 14px; /* Base */
+  --s15: 15px; /* Medium */
+  --s16: 16px; /* Medium */
+  --s17: 17px; /* Large */
+  --s18: 18px; /* Extra Large */
+  --s20: 20px; /* 2XL */
+  --s21: 21px; /* 2XL */
+  --s22: 22px; /* 3XL */
+  --s23: 23px; /* 3XL */
+  --s24: 24px; /* 4XL */
+  --s26: 26px; /* 4XL */
+  --s28: 28px; /* 5XL */
+  --s25: 25px; /* 5XL */
+  --s30: 30px; /* 6XL */
+  --s31: 31px; /* 6XL */
+  --s32: 32px; /* 7XL */
+  --s34: 34px; /* 8XL */
+  --s36: 36px; /* 8XL */
+  --s38: 38px; /* 8XL */
+  --s37: 37px; /* 8XL */
+  --s40: 40px; /* 9XL */
+  --s41: 41px; /* 10XL */
+  --s42: 42px; /* 10XL */
+  --s44: 44.3px; /* 10XL */
+  --s45: 45px; /* 11XL */
+  --s48: 48px; /* 12XL */
+  --s50: 50px; /* 12XL */
+  --s52: 52px; /* 12XL */
+  --s54: 54px; /* 13XL */
+  --s56: 56px; /* 13XL */
+  --s60: 60px; /* 13XL */
+  --s61: 61px; /* 13XL */
+  --s64: 64px; /* 14XL */
+  --s71: 71px; /* 14XL */
+  --s96: 96px; /* 15XL */
+  --s100: 100px; /* 15XL */
+  --s150: 150px;
+  --s400: 400px;
+  --h300: 300px;
+  --h700: 700px;
+
+  /* line height */
+  --lh24: 24px;
+  --lh25: 25px;
+  --lh140: 140%;
+}
+
+body {
+  font-family: var(--font-inter);
+  font-size: var(--fs14);
+}
+
+p,
+span {
+  font-size: var(--fs14);
+  font-family: var(--font-inter);
+  font-weight: 400;
+}
+
+.pointer {
+  cursor: pointer;
+}
+@media screen and (max-width: 1440px) {
+  :root {
+    --fs52: 40px;
+  }
+}
+@media screen and (max-width: 1200px) {
+  :root {
+    --fs96: 90px;
+
+    --fs68: 57px;
+    --fs64: 59px;
+    --fs60: 55px;
+    --fs58: 53px;
+    --fs56: 50px;
+    --fs52: 47px;
+    --fs48: 42px;
+    --fs42: 38px;
+    --fs40: 36px;
+    --fs38: 34px;
+    --fs32: 28px;
+    --fs28: 25px;
+    --fs24: 21px;
+    --fs23: 20px;
+    --fs20: 18px;
+    --fs18: 16px;
+    --fs16: 15px;
+
+    --s10: 10px;
+    --s12: 11px; /* Extra Small */
+    --s13: 12px; /* Small */
+    --s14: 13px; /* Base */
+    --s15: 14px; /* Medium */
+    --s16: 15px; /* Medium */
+    --s17: 14px; /* Large */
+    --s18: 17px; /* Extra Large */
+    --s20: 19px; /* 2XL */
+    --s22: 21px; /* 3XL */
+    --s24: 22px; /* 4XL */
+    --s25: 23px; /* 5XL */
+    --s26: 24px; /* 4XL */
+    --s28: 25px; /* 5XL */
+    --s30: 27px; /* 6XL */
+    --s31: 28px; /* 6XL */
+    --s32: 29px; /* 7XL */
+    --s34: 31px; /* 8XL */
+    --s36: 33px; /* 8XL */
+    --s37: 34px; /* 8XL */
+    --s38: 35px; /* 8XL */
+    --s40: 37px; /* 9XL */
+    --s41: 38px; /* 10XL */
+    --s44: 40px; /* 10XL */
+    --s45: 41px; /* 11XL */
+    --s48: 43px; /* 12XL */
+    --s50: 45px; /* 12XL */
+    --s52: 35px; /* 12XL */
+    --s54: 49px; /* 13XL */
+    --s56: 51px; /* 13XL */
+    --s60: 55px; /* 13XL */
+    --s61: 56px; /* 13XL */
+    --s64: 59px; /* 14XL */
+    --s71: 65px; /* 14XL */
+    --s96: 89px; /* 15XL */
+    --s150: 130px;
+  }
+}
+
+@media screen and (max-width: 992px) {
+  :root {
+    --fs96: 75px;
+    --fs68: 53px;
+    --fs64: 55px;
+    --fs60: 50px;
+    --fs58: 47px;
+    --fs56: 45px;
+    --fs52: 43px;
+    --fs48: 40px;
+    --fs42: 36px;
+    --fs40: 33px;
+    --fs38: 32px;
+    --fs32: 27px;
+    --fs28: 24px;
+    --fs24: 20px;
+    --fs23: 19px;
+    --fs20: 17px;
+    --fs18: 15px;
+    --fs16: 14px;
+    --fs14: 13px;
+
+    --s4: 3px;
+    --s6: 5px;
+    --s8: 7px;
+    --s10: 9px;
+    --s12: 10px; /* Extra Small */
+    --s13: 12px; /* Small */
+    --s14: 13px; /* Base */
+    --s15: 14px; /* Medium */
+    --s16: 15px; /* Medium */
+    --s17: 16px; /* Large */
+    --s18: 17px; /* Extra Large */
+    --s20: 18px; /* 2XL */
+    --s22: 20px; /* 3XL */
+    --s24: 21px; /* 4XL */
+    --s25: 22px; /* 5XL */
+    --s26: 23px; /* 4XL */
+    --s28: 24px; /* 5XL */
+    --s30: 26px; /* 6XL */
+    --s31: 27px; /* 6XL */
+    --s32: 28px; /* 7XL */
+    --s60: 30px; /* 7XL */
+    --s34: 30px; /* 8XL */
+    --s36: 32px; /* 8XL */
+    --s37: 33px; /* 8XL */
+    --s38: 34px; /* 8XL */
+    --s40: 35px; /* 9XL */
+    --s41: 37px; /* 10XL */
+    --s44: 39px; /* 10XL */
+    --s45: 40px; /* 11XL */
+    --s48: 42px; /* 12XL */
+    --s50: 43px; /* 12XL */
+    --s52: 45px; /* 12XL */
+    --s54: 47px; /* 13XL */
+    --s56: 49px; /* 13XL */
+    --s61: 51px; /* 13XL */
+    --s64: 55px; /* 14XL */
+    --s71: 60px; /* 14XL */
+    --s96: 85px; /* 15XL */
+    --s150: 110px;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  :root {
+    --fs96: 65px;
+    --fs68: 48px;
+    --fs64: 40px;
+    --fs60: 45px;
+    --fs58: 44px;
+    --fs56: 42px;
+    --fs52: 30px;
+    --fs48: 38px;
+    --fs42: 34px;
+    --fs40: 31px;
+    --fs38: 30px;
+    --fs37: 29px;
+    --fs38: 28px;
+    --fs34: 26px;
+    --fs32: 25px;
+    --fs28: 22px;
+    --fs24: 19px;
+    --fs23: 18px;
+    --fs20: 16px;
+    --fs18: 15px;
+    --fs16: 13px;
+    --fs14: 12px;
+    --fs12: 11px;
+
+    --s8: 6px;
+    --s10: 8px;
+    --s12: 9px; /* Extra Small */
+    --s13: 11px; /* Small */
+    --s14: 12px; /* Base */
+    --s15: 13px; /* Medium */
+    --s16: 14px; /* Medium */
+    --s17: 15px; /* Large */
+    --s18: 16px; /* Extra Large */
+    --s20: 17px; /* 2XL */
+    --s22: 18px; /* 3XL */
+    --s24: 19px; /* 4XL */
+    --s25: 20px; /* 5XL */
+    --s26: 22px; /* 4XL */
+    --s28: 23px; /* 5XL */
+    --s30: 24px; /* 6XL */
+    --s31: 25px; /* 6XL */
+    --s32: 26px; /* 7XL */
+    --s34: 28px; /* 8XL */
+    --s36: 30px; /* 8XL */
+    --s37: 31px; /* 8XL */
+    --s38: 32px; /* 8XL */
+    --s40: 32px; /* 9XL */
+    --s41: 33px; /* 10XL */
+    --s44: 35px; /* 10XL */
+    --s45: 36px; /* 11XL */
+    --s48: 38px; /* 12XL */
+    --s50: 40px; /* 12XL */
+    --s52: 41px; /* 12XL */
+    --s54: 43px; /* 13XL */
+    --s56: 45px; /* 13XL */
+    --s60: 46px; /* 13XL */
+    --s61: 47px; /* 13XL */
+    --s64: 50px; /* 14XL */
+    --s71: 55px; /* 14XL */
+    --s96: 75px; /* 15XL */
+    --s100: 50px; /* 15XL */
+    --s150: 90px;
+  }
+}
+
+@media (max-width: 480px) {
+  :root {
+    --fs96: 50px;
+    --fs68: 38px;
+    --fs64: 30px;
+    --fs60: 35px;
+    --fs58: 34px;
+    --fs56: 32px;
+    --fs52: 30px;
+    --fs48: 28px;
+    --fs42: 26px;
+    --fs40: 24px;
+    --fs38: 23px;
+    --fs32: 20px;
+    --fs28: 18px;
+    --fs24: 16px;
+    --fs23: 15px;
+    --fs20: 14px;
+    --fs19: 13px;
+    --fs18: 13px;
+    --fs16: 12px;
+    --fs14: 11px;
+    --fs12: 10px;
+    --fs10: 9px;
+
+    --s4: 3px;
+    --s6: 4px;
+    --s8: 5px;
+    --s10: 7px;
+    --s12: 8px; /* Extra Small */
+    --s13: 9px; /* Small */
+    --s14: 10px; /* Base */
+    --s15: 11px; /* Medium */
+    --s16: 12px; /* Medium */
+    --s17: 13px; /* Large */
+    --s18: 14px; /* Extra Large */
+
+    --s20: 15px; /* 2XL */
+    --s22: 16px; /* 3XL */
+    --s24: 17px; /* 4XL */
+    --s25: 18px; /* 5XL */
+    --s26: 19px; /* 4XL */
+    --s28: 20px; /* 5XL */
+    --s30: 21px; /* 6XL */
+    --s31: 22px; /* 6XL */
+    --s32: 23px; /* 7XL */
+    --s34: 24px; /* 8XL */
+    --s36: 26px; /* 8XL */
+    --s37: 27px; /* 8XL */
+    --s38: 28px; /* 8XL */
+    --s40: 28px; /* 9XL */
+    --s41: 29px; /* 10XL */
+    --s44: 30px; /* 10XL */
+    --s45: 31px; /* 11XL */
+    --s48: 32px; /* 12XL */
+    --s50: 34px; /* 12XL */
+    --s52: 35px; /* 12XL */
+    --s54: 36px; /* 13XL */
+    --s56: 38px; /* 13XL */
+    --s60: 39px; /* 13XL */
+    --s61: 40px; /* 13XL */
+    --s64: 42px; /* 14XL */
+    --s71: 47px; /* 14XL */
+    --s96: 60px; /* 15XL */
+    --s150: 70px;
+  }
+}
+@media (max-width: 375px) {
+  :root {
+    --fs68: 35px;
+    --fs52: 25px;
+    --fs37: 12px;
+    --fs19: 11px;
+  }
+}

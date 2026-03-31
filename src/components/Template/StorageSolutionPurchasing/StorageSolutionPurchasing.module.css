@@ -1,0 +1,17 @@
+
+.heroSection{
+    min-height: 690px !important;
+}
+
+@media (max-width: 992px) {
+    .heroSection {
+      padding-top: 120px !important;
+    }
+  }
+  
+
+@media (max-width: 576px) {
+  .heroSection {
+    min-height: 500px !important;
+  }
+}

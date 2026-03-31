@@ -1,0 +1,146 @@
+.containerClass {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: var(--s6);
+}
+
+.labelWrapper {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  gap: var(--s4);
+}
+
+.labelText {
+  color: var(--black-1);
+  font-family: var(--font-montserrat);
+  font-size: var(--fs14);
+  font-weight: 500;
+  line-height: var(--s20);
+  text-transform: capitalize;
+}
+
+
+
+.inputContainer {
+  border-radius: var(--s8);
+  border: 1px solid var(--white-5);
+  background: var(--white);
+  display: flex;
+  padding: 12px 16px;
+  width: 100%;
+  align-items: center;
+  gap: var(--s8);
+  align-self: stretch;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  position: relative;
+  box-shadow: 0 1px 2px 0 rgba(16, 24, 40, 0.05);
+}
+
+.inputContainer:hover:not(:focus-within) {
+  border-color: var(--blue-4);
+  box-shadow: 0 0 0 1px var(--blue-4-o10);
+}
+
+.inputContainer:focus-within {
+  border-color: var(--blue-1);
+  box-shadow: 0 0 0 3px var(--blue-4-o10);
+}
+
+.inputContainer:active {
+  transform: translateY(0);
+  box-shadow: 0 0 0 3px var(--blue-4-o10), 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+.withLeftIcon {
+  padding-left: var(--s25);
+}
+
+.inputContainer input {
+  border: none;
+  outline: none;
+  font-size: var(--fs16);
+  font-weight: 500;
+  font-family: var(--font-inter);
+  background-color: transparent;
+  line-height: var(--s24);
+  width: 100%;
+  transition: all 0.2s ease;
+}
+
+.inputContainer input::-webkit-outer-spin-button,
+.inputContainer input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+.inputContainer input:focus {
+  color: var(--black-2);
+}
+
+.inputContainer input:active {
+  color: var(--black-2);
+}
+.inputDisabled {
+  cursor: not-allowed;
+  opacity: 0.5;
+}
+
+
+.inputContainer input::placeholder {
+  color:var(--gray-4);
+  font-size: var(--fs14);
+  font-weight: 400;
+  font-family: var(--font-inter);
+  line-height: var(--s20);
+  opacity: 0.4;
+}
+
+.withRightIcon {
+  padding-right: var(--s30);
+}
+.leftIconBox {
+  position: absolute;
+  left: 18px;
+  top: 48%;
+  transform: translateY(-50%);
+  height: max-content;
+}
+
+.iconColor svg {
+  color: var(--black-2);
+  opacity: 0.3;
+  transition: all 0.2s ease;
+  width: var(--s14);
+  height: var(--s14);
+}
+
+.withValue svg {
+  opacity: 1;
+}
+
+.rightIconBox,
+.passwordIcon {
+  position: absolute;
+  right: 18px;
+
+  top: 48%;
+  transform: translateY(-50%);
+  height: max-content;
+}
+.passwordIcon {
+  color: var(--black-2);
+  opacity: 0.3;
+  cursor: pointer;
+  width: var(--s22);
+  height: var(--s22);
+}
+
+.required {
+  color: var(--error);
+  font-family: var(--font-montserrat);
+  font-size: var(--fs14);
+  font-weight: 500;
+  line-height: var(--s20);
+  text-transform: capitalize;
+}
